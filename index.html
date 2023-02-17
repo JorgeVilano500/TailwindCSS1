@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tailwind CSS Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Can change everything in the css file in html tag and will change the rems in all the elements -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script> -->
+</head>
+<body>
+    <!-- bg-(color)-(intensity) for the background color to change text-(Color) to change the text font color -->
+    <!-- if there is no sm, md, lg then it will be for the smaller screens -->
+    <h1 class="sm:bg-gray-900 bg-yellow-900 text-white px-12 py-24 mx-4 my-10 sm:text-4xl shadow">My name is JV and youre watching + practicing Tailwind</h1>
+    <!-- https://tailwindcss.com/docs/customizing-colors
+        2 ways to get colors thru hex or rgb values
+    https://tailwindcss.com/docs/background-color -->
+    <h1 class="sm:bg-rose-900 bg-yellow-900 text-gray-700 px-12 py-24 mx-4 my-10 sm:text-4xl shadow">My name is JV and youre watching + practicing Tailwind</h1>
+    
+    <!-- gradients -->
+    <!-- multiple gradient colors -->
+    <h1 class="bg-gradient-to-r from-cyan-500 via-blue-900 to-rose-600  text-white px-12 py-24 mx-4 my-10 sm:text-4xl shadow">My name is JV and youre watching + practicing Tailwind</h1>
+    <!-- 2 gradient colors -->
+    <h1 class="bg-gradient-to-r from-cyan-500  to-rose-600  text-white px-12 py-24 mx-4 my-10 sm:text-4xl shadow">My name is JV and youre watching + practicing Tailwind</h1>
+
+    <!-- hover classes -->
+    <!-- need to take out graident for color effect to work -->
+    <h1 class="bg-cyan-900 hover:text-gray-900 hover:bg-gray-200  text-white px-12 py-24 mx-4 my-10 sm:text-4xl shadow ">My name is JV and youre watching + practicing Tailwind</h1>
+
+    <!-- flex needs width for it to appear -->
+    <div class="flex flex-col sm:flex-row">
+        <!-- under 640px it turns to a column for mobile screens -->
+        <!-- h-96 is the highest -->
+        <div class="h-96 sm:flex-1   bg-gray-800"></div>
+        <div class="h-96 sm:flex-1  bg-blue-800"></div>
+        <div class="h-96 sm:flex-1  bg-red-800"></div>
+    </div>
+
+    <div class="flex flex-col sm:flex-row">
+        <!-- under 640px it turns to a column for mobile screens -->
+        <!-- h-96 is the highest -->
+        <div class="h-96 sm:flex-grow   bg-gray-800"></div>
+        <div class="h-96 w-24  bg-blue-800"></div>
+        <div class="h-96 w-24  bg-red-800"></div>
+    </div>
+    
+
+    <!-- grids -->
+    <div class="grid grid-cols-3 gap-1">
+        <div class="h-20 w-full bg-gray-800"></div>
+        <div class="h-20 col-span-2 w-full bg-blue-800"></div>
+        <!-- <div class="h-20 w-full bg-red-800"></div> -->
+
+        <div class="h-20 w-full bg-gray-800"></div>
+        <div class="h-20 w-full bg-blue-800"></div>
+        <div class="h-20 w-full bg-red-800"></div>
+
+        <div class="h-20 w-full bg-gray-800"></div>
+        <div class="h-20 w-full bg-blue-800"></div>
+        <div class="h-20 w-full bg-red-800"></div>
+
+        <div class="h-20 w-full bg-gray-800"></div>
+        <div class="h-20 w-full bg-blue-800"></div>
+        <div class="h-20 w-full bg-red-800"></div>
+    </div>
+
+    <!-- scroll snapping -->
+
+    <!-- good for leaving items in the center -->
+    <div class="flex overflow-x-auto snap-x" >
+        <!-- flex-shrink-0 makes it scrollable to the left -->
+        <div class="w-80 scroll-ml-6 snap-center flex-shrink-0 h-48 bg-gray-800"></div>
+        <div class="w-80 scroll-ml-6 snap-center flex-shrink-0 h-48 bg-green-800"></div>
+        <div class="w-80 scroll-ml-6 snap-center flex-shrink-0 h-48 bg-red-800"></div>
+        <div class="w-80 scroll-ml-6 snap-center flex-shrink-0 h-48 bg-blue-800"></div>
+        <div class="w-80 snap-center flex-shrink-0 h-48 bg-yellow-800"></div>
+    </div>
+    <!-- good for leaving items at start -->
+    <div class="flex overflow-x-auto snap-x" >
+        <!-- flex-shrink-0 makes it scrollable to the left -->
+        <div class="scroll-ml-6 w-80   snap-start flex-shrink-0 h-48 bg-gray-800"></div>
+        <div class="scroll-ml-6 w-80   snap-start flex-shrink-0 h-48 bg-green-800"></div>
+        <div class="scroll-ml-6 w-80   snap-start flex-shrink-0 h-48 bg-red-800"></div>
+        <div class="scroll-ml-6 w-80   snap-start flex-shrink-0 h-48 bg-blue-800"></div>
+        <div class="scroll-ml-6 w-80  snap-start flex-shrink-0 h-48 bg-yellow-800"></div>
+    </div>
+
+    <div>
+        <h1 class="text-6xl italic font-extralight text-stone-400 decoration-indigo-500 underline hover:decoration-wavy ">The quick brown fox whatever that is.</h1>
+        <h2 class="text-3xl">asdf</h2>
+        <h3>asdfadsf</h3>
+    </div>
+
+
+    <!-- shadows -->
+
+</body>
+</html>
